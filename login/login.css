@@ -1,0 +1,27 @@
+
+.fullh {
+    height: 100%;
+}
+
+body>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.loginbox {
+    border-radius: 2px;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    box-shadow: 0 0 1em black
+}
+
+body {
+    background-color: coral;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

@@ -13,6 +13,7 @@ body {
     font-weight: 300;
     font-size: 2em;
     color: dimgray;
+    overflow: hidden
 }
 
 nav {
@@ -24,6 +25,7 @@ nav {
     width: 200px;
     background-color: coral;
     color: white;
+    z-index: 999;
 }
 
 nav a {
@@ -60,9 +62,18 @@ nav a:hover {
 .explorersettings {
     font-size: 14pt;
     font-weight: 400;
-    padding: 1em;
     text-align: right;
     border-bottom: solid .1em coral;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 25px;
+    background-color: whitesmoke;
+    z-index: 1;
 }
 
 .explorersettings a {
@@ -80,4 +91,58 @@ nav a:hover {
 
 .explorersettings a.active.down {
     text-decoration: underline;
+}
+
+.explorer>*>div {
+    display: inline-block;
+    width: 200px;
+    margin: 20px;
+    padding: 5px;
+    border-radius: 2px;
+    height: 50px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: 250ms all;
+}
+
+.explorer {
+    padding: 1em;
+    font-size: .8em;
+    position: fixed;
+    top: 50px;
+    left: 250px;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+
+
+.explorer i {
+    width: 50px;
+    height: 50px;
+    text-align: center
+}
+
+.folders {
+/*    border-bottom: .05em solid coral;*/
+    background-color: whitesmoke;
+    border-radius: 2px;
+}
+
+.folder {
+    background-color: white
+}
+
+.file {
+    background-color: whitesmoke;
+}
+
+.explorer>*>div:hover {
+    color: coral;
+    transform: scale(1.1);
 }
